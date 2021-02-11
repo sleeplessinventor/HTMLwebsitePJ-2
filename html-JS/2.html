@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์รวบรวมข้อมูลเพื่อนๆ 4/1</title>
+    <link rel="icon" href="images/megumegu.jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <!-- HTML5 Sematics Elements 
+        <article>
+        <aside>
+        <details>
+        <figcaption>
+        <figure>
+        <footer>
+        <header>
+        <main>
+        <mark>
+        <nav>
+        <section>
+        <summary>
+        <time>    
+    -->
+    <header>
+        <!-- Header -->
+    </header>
+    <nav>
+        <!-- Nav -->
+        <div class="marquee"><marquee behavior="ALTERNATE">✨😃ยินดีต้อนรับ😃✨</marquee></div>
+    </nav>
+    <section>
+        <!-- Section -->
+        <div class="headtextsection"><b>นางสาวพิมพ์วสัญธ์ ดวงสุวรรณ</b></div>
+        <div class="icon-bar">
+            <a href="index.html" class="bin">หน้าหลัก</a>
+            <a href="1.html" class="b1">แปลงระยะทาง</a>
+            <a href="2.html" class="b2">แปลงน้ำหนัก</a>
+            <a href="3.html" class="b3">แปลงอุณหภูมิ</a>
+            <a href="4.html" class="b4">แปลงความเร็ว</a>
+            <a href="5.html" class="b5">เพื่อนคนที่ 5</a>
+            
+        </div>
+    </section>
+    <article>
+        <!-- Article -->
+        <div class= "hihead"><h1 style="font-size: 200%;">👩‍⚕️ เพื่อนคนที่ 2 👩‍⚕️</h1></div>
+        <div class="w3-row-padding" style="margin:0 -16px">
+            <p style="margin-left:8px;margin-bottom:4px">Type a value in any of the fields to convert between weight measurements:</p>
+            <div class="w3-half w3-margin-top">
+              <label>Pounds</label>
+              <input id="inputPounds" class="w3-input w3-border" type="number" placeholder="Pounds" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+            </div>
+            <div class="w3-half w3-margin-top">
+              <label>Kilograms</label>
+              <input id="inputKilograms" class="w3-input w3-border" type="number" placeholder="Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+            </div>
+            <div class="w3-half w3-margin-top">
+              <label>Ounces</label>
+              <input id="inputOunces" class="w3-input w3-border" type="number" placeholder="Ounces" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+            </div>
+            <div class="w3-half w3-margin-top">
+              <label>Grams</label>
+              <input id="inputGrams" class="w3-input w3-border" type="number" placeholder="Grams" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+            </div>
+            <div class="w3-half w3-margin-top">
+              <label>Stones</label>
+              <input id="inputStones" class="w3-input w3-border" type="number" placeholder="Stones" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+            </div>
+          </div>
+        
+    </article>
+    <footer>
+        <!-- Footer -->
+        Modified โดย นายธนาวุฒิ ผาสุขมูล<br>
+            โรงเรียนอยุธยาวิทยาลัย<br>
+            (╯°□°)╯︵ ʞooqǝɔɐℲ
+    </footer>
+</body>
+</html>
+
+<script>
+    function weightConverter(source,valNum) {
+      valNum = parseFloat(valNum);
+      var inputPounds = document.getElementById("inputPounds");
+      var inputKilograms = document.getElementById("inputKilograms");
+      var inputOunces = document.getElementById("inputOunces");
+      var inputGrams = document.getElementById("inputGrams");
+      var inputStones = document.getElementById("inputStones");
+      if (source=="inputPounds") {
+        inputKilograms.value=(valNum/2.2046).toFixed(2);
+        inputOunces.value=(valNum*16).toFixed(2);
+        inputGrams.value=(valNum/0.0022046).toFixed();
+        inputStones.value=(valNum*0.071429).toFixed(3);
+      }
+      if (source=="inputKilograms") {
+        inputPounds.value=(valNum*2.2046).toFixed(2);
+        inputOunces.value=(valNum*35.274).toFixed(2);
+        inputGrams.value=(valNum*1000).toFixed();
+        inputStones.value=(valNum*0.1574).toFixed(3);
+      }
+      if (source=="inputOunces") {
+        inputPounds.value=(valNum*0.062500).toFixed(4);
+        inputKilograms.value=(valNum/35.274).toFixed(4);
+        inputGrams.value=(valNum/0.035274).toFixed(1);
+        inputStones.value=(valNum*0.0044643).toFixed(4);
+      }
+      if (source=="inputGrams") {
+        inputPounds.value=(valNum*0.0022046).toFixed(4);
+        inputKilograms.value=(valNum/1000).toFixed(4);
+        inputOunces.value=(valNum*0.035274).toFixed(3);
+        inputStones.value=(valNum*0.00015747).toFixed(5);
+      }
+      if (source=="inputStones") {
+        inputPounds.value=(valNum*14).toFixed(1);
+        inputKilograms.value=(valNum/0.15747).toFixed(1);
+        inputOunces.value=(valNum*224).toFixed();
+        inputGrams.value=(valNum/0.00015747).toFixed();
+      }
+    
+    }
+</script>
