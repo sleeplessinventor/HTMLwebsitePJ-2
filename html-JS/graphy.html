@@ -56,7 +56,7 @@
 			<table>
 				<tr>
 					<td></td>
-					<td align="center">y-max: <input id="toolbox_zoombox_ymax" class="jsgcalc_ymax" type="text" size="4" /></td>
+					<td align="center">y-สูงสุด: <input id="toolbox_zoombox_ymax" class="jsgcalc_ymax" type="text" size="4" /></td>
 					<td></td>
 				</tr>
 				<tr>
@@ -66,7 +66,7 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td align="center">y-min: <input id="toolbox_zoombox_ymin" class="jsgcalc_ymin" type="text" size="4" /></td>
+					<td align="center">y-ต่ำสุด: <input id="toolbox_zoombox_ymin" class="jsgcalc_ymin" type="text" size="4" /></td>
 					<td></td>
 				</tr>
 			</table>
@@ -75,14 +75,14 @@
 				onclick="jsgcalc.setWindow($('#toolbox_zoombox_xmin').val(), $('#toolbox_zoombox_xmax').val(), $('#toolbox_zoombox_ymin').val(), $('#toolbox_zoombox_ymax').val())">
 					Apply</a>
 			<br /><br />
-			<a href="javascript: void(0);" onclick="jsgcalc.resetZoom()">Reset View</a>
+			<a href="javascript: void(0);" onclick="jsgcalc.resetZoom()">รีเซ็ตมุมมอง</a>
 		</div>
 	</div>
 	
 	<div class="toolbox" id="toolbox_trace">
 		<div class="toolbox_header">
-			<div class="toolbox_close"><a href="javascript: void(0)">close</a></div>
-			Trace
+			<div class="toolbox_close"><a href="javascript: void(0)">ปิด</a></div>
+			แกะรอย
 		</div>
 		
 		<div class="toolbox_main">
@@ -96,7 +96,7 @@
 
 <div id="sidewrapper">
 	<div id="graph_sidebar">
-		<h1 style="font-family: Lato, Arial, sans-serif; font-style: italic; font-size: 28pt; color: #3d94f6; text-shadow: 1px 1px #FFF ">Graphr</h1>
+		<h1 style="font-family: Lato, Arial, sans-serif; font-style: italic; font-size: 28pt; color: #3d94f6; text-shadow: 1px 1px #FFF ">กราฟเฟอร์</h1>
 		<span style="font-size: 90%; position: relative; bottom: 4px;"><em>The JavaScript Graphing Calculator</em>
 		</span><br /><br />
 
@@ -105,7 +105,7 @@
 		</div>
 		<br />
 		<div id="buttonbar">
-			<a class="fancybutton" href="javascript:void(0)" onclick="jsgui.evaluate()">Evaluate</a>
+			<a class="fancybutton" href="javascript:void(0)" onclick="jsgui.evaluate()">หาค่า</a>
 			<a class="fancybutton" href="javascript:void(0)" onclick="jsgui.addInput()">+</a>
 			<a class="fancybutton greybutton" href="javascript:void(0)" id="settings_button" onclick="$('#settings').toggle(400)"><img src='images/settings.png' alt='Settings' /></a><br /><br />
 		</div>
@@ -118,14 +118,14 @@
 			</div>
 	
 			<div id="gridlines_select" class="options_list">
-				Gridlines:
+				เส้นตาราง:
 				<a href="javascript:void(0)" onclick="jsgui.setGridlines('normal')" id="gridlines_select_normal" class="option option_selected">NORMAL</a>
 				<a href="javascript:void(0)" onclick="jsgui.setGridlines('less')" id="gridlines_select_less" class="option">LESS</a>
 				<a href="javascript:void(0)" onclick="jsgui.setGridlines('off')" id="gridlines_select_off" class="option">OFF</a>
 			</div>
 	
 			<div id="quality_select" class="options_list">
-				Precision:
+				ความแม่นยำ:
 				<a href="javascript:void(0)" onclick="jsgui.setQuality(0.1)" id="quality_select_01" class="option">LOW</a>
 				<a href="javascript:void(0)" onclick="jsgui.setQuality(0.5)" id="quality_select_05" class="option">MED</a>
 				<a href="javascript:void(0)" onclick="jsgui.setQuality(1)" id="quality_select_1" class="option option_selected">HIGH</a>
@@ -133,15 +133,16 @@
 			</div>
 		</div>
 
-		<p>By <a href="http://www.yerich.net">Richard Ye</a> | 
-		<a href="javascript: void(0);" onclick="about()">Disclaimer</a> | <a href="https://github.com/yerich/Graphr">GitHub</a><br />
-		<span style="color: #999">Development (version 0.4)</span></p>
+		<p>ต้นฉบับโดย <a href="http://www.yerich.net">Richard Ye</a> | 
+		<p>แปลไทยโดย Thanawut<br>
+		<a href="javascript: void(0);" onclick="about()">ข้อจำกัดความรับผิดชอบ</a> | <a href="https://github.com/yerich/Graphr">GitHub</a><br />
+		<span style="color: #999">เวอร์ชั่น 0.4</span></p>
 		
 	</div>
 </div>
 
 <div id="graph_wrapper">
-	<canvas id="graph">Sorry, your browser does not support this application. The following browsers are supported:<br /><br />
+	<canvas id="graph">ขออภัย, browser ของคุณไม่ซัพพอร์ต555+:<br /><br />
 	<a href="http://www.google.com/chrome/">Google Chrome</a><br /><a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br />
 	<a href="http://www.opera.com/">Opera</a></canvas>
 </div>

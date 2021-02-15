@@ -28,6 +28,7 @@ nav {
 section{
     width: 20%;
     float: left;
+    background-color: #00c1ff;
     animation: fadeIn;
     animation-duration: 2s;
 }
@@ -56,10 +57,10 @@ section{
   }
 /* css ส่วนแสดงผลเนื้อหาข้อมูลเพื่อน */
 article{
-    background-color: transparent;
+    background-color: white;
     float: left;
     width: 80%;
-    height: auto;
+    height: 100%;
     animation: fadeIn;
     animation-duration: 3s;
 }
